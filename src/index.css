@@ -1,0 +1,261 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  display: flex;
+}
+
+#sideBar {
+  height: 100vh;
+  background-color: rgb(208, 236, 236);
+  width: 20%;
+}
+#sideBar #searchBar input {
+  width: 80%;
+  height: 40%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: none;
+}
+#sideBar #searchBar button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 30px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 42%;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+#sideBar #searchBar input:focus {
+  outline: none;
+}
+#searchBar {
+  height: 80px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #a6caca;
+}
+#sideBar #searchBar button:hover {
+  opacity: 0.7;
+}
+#sideBar #searchBar button:active {
+  opacity: 0.4;
+}
+
+#user {
+  display: flex;
+  padding: 5px 0px 5px 20px;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: 80px;
+  border-bottom: 1px solid #9d9d9d;
+}
+
+#user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+#Users button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#Users {
+  width: 100%;
+  height: 95%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Users:hover {
+  overflow: auto;
+}
+
+#isOnline {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border: 1px solid white;
+  border-radius: 100%;
+  position: absolute;
+  left: 72px;
+  bottom: 28px;
+}
+
+#user-name-date {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+#user-manage {
+  display: flex;
+  width: calc(100% - 70px - 40px);
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+#user-name {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#date {
+  color: grey;
+  font-size: 12px;
+}
+#last-message {
+  color: grey;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#ChatSection {
+  background-color: rgb(222, 222, 255);
+  width: calc(100vw - 20%);
+  margin: 0px 20px;
+}
+
+#ChatSection #selected-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #9d9d9d;
+}
+
+#ChatSection #call-video button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 100%;
+}
+#ChatSection #call-video button:hover {
+  opacity: 0.7;
+}
+
+#ChatSection #call-video {
+  display: flex;
+  gap: 10px;
+}
+#ChatSection #nameUser {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#active {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(34, 176, 34);
+  border-radius: 100%;
+}
+#activeSection {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #9d9d9d;
+}
+
+#chatarea {
+  width: 100%;
+  height: calc(100vh - 50px - 80px);
+}
+
+#message-area input {
+  width: 90%;
+  height: 71%;
+  border: none;
+  border-radius: 50px;
+  padding: 0px 20px;
+  display: flex;
+  font-size: 16px;
+}
+
+#emoji {
+  /* position: relative; */
+}
+.emoji {
+  position: fixed;
+  bottom: 600px;
+  left: 50px;
+}
+#message-area {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #9d9d9d;
+}
+#message-area button {
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+#message-area div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#message-area button:hover{
+  opacity: 0.7;
+}
+
+#message-area button:active{
+  opacity: 0.4;
+}
+.send {
+  background-color: orangered;
+  color: white;
+}
+
+#Users button:hover {
+  background-color: rgb(215, 253, 253);
+}
+
+#Users button:active {
+  background-color: rgb(244, 255, 255);
+}
+
+#Users button {
+  background-color: Transparent;
+  border: none; 
+  cursor:pointer;
+}
+.selectedUser {
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(166,202,202,1) 100%);
+}
