@@ -290,8 +290,19 @@ p {
   border-radius: 10px 0px;
 }
 
+#receved-message pre {
+  align-items: center;
+  white-space: pre-wrap;
+  max-width: 67%;
+  background-color: rgb(156, 221, 242);
+  padding: 5px 10px;
+  border-radius: 10px 0px;
+}
+
 #receved-message {
   display: flex;
+  justify-content: end ;
+  gap: 15px;
   
 }
 #receved-message img{
