@@ -1,12 +1,19 @@
 import { CiVideoOn } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
-import userData from "../../userData";
-
-
+import Conversation from "./conversation";
 import Message from "./Message";
-
-export default function ChatSection({currentuser}) {
-    const user = userData[currentuser];
+import { useState ,useRef} from "react";
+export default function ChatSection({ currentuser, myData, handleNewMessage }) {
+  const user = myData[currentuser];
+  const divConv = useRef();
+  const [tableMessage, setTableMessage] = useState(user.conversation);
+  function handleNew(message) {
+    setTableMessage((current) => {
+      const newTable = [...current, message];
+      user.conversation = newTable;
+      return newTable
+    });
+  }
   return (
     <div id="ChatSection">
       <div id="selected-user">
@@ -26,8 +33,10 @@ export default function ChatSection({currentuser}) {
           </button>
         </div>
       </div>
-      <div id="chatarea"></div>
-        <Message />
+      <div id="chatarea" ref={divConv}>
+        <Conversation selecteduser={user} />
+      </div>
+      <Message handleNewMessage={handleNew} />
     </div>
   );
 }

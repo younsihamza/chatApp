@@ -184,18 +184,27 @@ p {
 
 #chatarea {
   width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
   height: calc(100vh - 50px - 80px);
+  overflow: scroll;
+}
+#chatarea:hover {
+  overflow: scroll;
 }
 
-#message-area input {
+#message-area textarea {
+  margin-top: 3px;
   width: 90%;
   height: 71%;
   border: none;
   border-radius: 50px;
-  padding: 0px 20px;
+  padding: 10px 20px 0px;
   display: flex;
   font-size: 16px;
+  resize: none;
 }
+
 
 #emoji {
   /* position: relative; */
@@ -258,4 +267,35 @@ p {
 .selectedUser {
   background: rgb(255,255,255);
   background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(166,202,202,1) 100%);
+}
+
+#myMessage {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+#myMessage img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+#myMessage pre {
+  align-items: center;
+  white-space: pre-wrap;
+  max-width: 67%;
+  background-color: bisque;
+  padding: 5px 10px;
+  border-radius: 10px 0px;
+}
+
+#receved-message {
+  display: flex;
+  
+}
+#receved-message img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
 }
